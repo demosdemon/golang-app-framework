@@ -1,0 +1,49 @@
+language: go
+env:
+  global:
+    - GO111MODULE=on
+    - secure: U5YXbzr1baas5JV41WFtmM/o4ZzurhNhRB0voNKNUzVqckNHYP2YkmB/ZgXZkS2i0Y8cV2XawVNHTvv+M9qGfIn6fjsd0iNCPNqJOvhkzIc5SCxr5Hk74Ip+sDbn7QwKvSeNqWNjpvqegc3g3xO+g6qjn4kcw4T4ynIN/deNIIklRpEZhZfFEGuHulOMQe2f6CoRlHAoWUC7+VCG9C02APBSefxWJVZXatmtvrB17LDDLXiV8n+NY/AiIs4N82RKSYGXM/krYzRq1RXj2v97ZWZp3Bpa50pm6xdX8e/nCH/U5I+Nw8tH4XpXsuCzzl03ODauDwPwQbk3tJbuM/E5T2UwfcxMBm+hmmaKwFW9/XZz0wtSeliZkWZQsJSv5KWAnkBrfHxjMZ51xpeURc2ixstl91CI7oiehkjWFe64DBnVSULpKjqUXVJtp9350uxXwvOgx0qC1fbEu6jdR9O7A5iJen6haDQl6p54PxVNOzlqT8Eq/MXmHOeqVH3t3QAFgcJSi/LTn9G/BT6tiOyH/wQilruS1eia+a+u1czpNK0sttP+YhUIS3fof24naNu8sNOOzBvZFK9kX9DRZvDJOQE28VwCkyhcpSy4HroJNYQPuFrRP2gBJ6Y115gax+dZ4eH4IHEMQRrIvPN+46kGzV8TLAW0873DoRDQsmoMArg=
+    - secure: QlQs15u9ZYIn6eAuYc4+k1dFDunrLkv69MnpDz2QQy+zkPpnoQGRLVzXLQGLF/h1eT2sq/DoYy2DFculrJL7xrAsEYBMwksNnbWCRyMYQfUvKFSa0zfkg0jspFOWC8Pf802jp/J5kuiLMG9gqGbYPyKKxKWLCfRyaa6e68/RtUy3s3z07OJVWCjrsEhyFr5/cDEyCCJFsxqwchfW6TAJSKsmlEO1wlT89F6HNQUONGDOzmEfFgUmtri9QuY2AGOfQOf1n5ZmQH/nAVBYdCYFtSU4wwDjDc0D3NkG0DTyZAbahpSCkoRGAxKf8omTO7Dd5a23nBT2K54vOkAGnCcWxYYtRSJRI3ye42Xv1rHfywgTpNtp9F+uoMSsdU3BL5bImhtgfOSeyCqUUoncYNk/lv4otcOCKlwBvdFiFJvSejkqJzzsyppzI1H3H6tUE0dDpJ/WsrlJ5kZ8qcFS+z9TlJNKRvuGlInkEJDsRFXZH2gGNxkpOhM51sKLL718Cm5B/ET70EZ8iT2LEolaxHPpcuzOR4Ujvq26P4aoNERviIjwXrqXja/9p6icNC0Yd1KouGFViXqOIleVg3dn/lycq77MUBTtMlt83qg7stOsCJU0aYx5YmcYdC7PpUGw6aTmYdMgH+WbKs9e8Z5M3Hf1qVToFQrEJO4FsNGEQ/LiQMI=
+    - secure: prfPmVVp86ajruY6qivxhf/26UyQV8FSPvcOKn2ykSr4uf8tD2W2IcihOPbbiLTZFgHlswmU1yTAlNddSvXSAGKTfzQRdiBcF6frPeI84TvPkrvBytZoZUFigVopxUvWQMBxfD/em600oshGvhta323jd9K+Rr5MUeUhpaqqaHNiBg33wFjBVYxcLeTch+eM9I2mAj4B5ivqEX74uZ4JnVKUpx9MEOdvsqgNFg5Yqo5Nct9o2URdcBzOMwEuRS3g038oYSy9NCAkPdpmezBKU7lSzD1IDJdGmxOt3uaF6sgUSt0opQOueT/zzexRW0zqnHiN9i8O/9uKRdYTM2gqoUZTIVrWLmTY+BZSBs4L7xjLwRmNiPahtJRNZXThrcUyicXZh5ACOSivCHkH7t746wBAvZp4+luhSRqMx02Lo2LbH1aKO3urObGMMxPA4V62D22dr0skXuobXM/KJdSXAljkvMPNsNkqyQiPyX0MDWEHsRDX+/xXdJDpss9wJMeKPemEuYjnottZlFaundsm+KKd/CvxN1pM/jwaBnIQ2f+Ga1cjhorXC4nzb5JeaMDXVIi0THGqFgkAD1nztBRSRSFrq1T57XsdcXuV4oGXlOr8z3EvabHPmvV8v4Evofqy4wPWo2pQZD5ST/2aa01M+tvyobgvLWJKWSfb+UXtQHI=
+    - secure: scgqmCh00nkNOUdrAgcvwf3KvBaXHKkojMxkmnj3UKu/5y27FZcrAqhxefsrZ+gwrFVEKiNXObl2KNzxgT8odGyHRc9foEL8hutRTYJeeqNIlbPqTdXSglifWWLvmzZPyzCJtuCJdyMBNjqdQ2qxLIDfGghH4S7JUJzzMhOFQeZUHCkFSzaNQP2lhL76nRPc0eY9AbLdX0IQnA4NuRVTKn8ueNeklS0m2pHa1+Qh0uMTox4vANDegZO258lVJXCl+Lpu8CbSj6gQ1a93ZpnxH3IY08p8csJhLwgVPxdy8w2g4tPAmkDmOmM/l6u+v0jG+/b4OeYAe/LyJe+YbWD6BvhmvtNOepvefaH0O0KM7lyXMxyAqGOY8qF3qQOUMtCKDXmYGxVTS3WcHEggCQ/2rHa3shQS7MbNHCHP49NXXdtW3747z8AkkzGHeaX2zB/epzlthiQGmfynq/lUe5/0gNXGBd4NVOFv+Jn0PcEfX+y9l8Jh5Q4+pOcttrKckmPxRtJv+9eDgfEU6Kt1zJ394FJQPNvXRkkPMK/YNDcOj9aHrDwjt0hNo7jK+l8YVccW/WGvXMPs0ReCe7XfR0U569yMUJ8Gt0kSycEKEF/fy08/Puk7KvLIdO9yL3lT4xQH+hGvkEpdQmUXMakMhBt4J6J1jcfV0Or6Jt9oeXoZMK0=
+    - AWS_DEFAULT_REGION=us-east-2
+    - AWS_DEFAULT_OUTPUT=table
+
+go:
+  - 1.12.x
+  - master
+
+os:
+  - linux
+  - osx
+
+dist: xenial
+
+before_install:
+  - if [[ $TRAVIS_OS_NAME == linux ]]; then pip install --user --upgrade awscli; fi
+  - if [[ $TRAVIS_OS_NAME == osx ]]; then pip install --upgrade awscli; fi
+  - if [[ $TRAVIS_OS_NAME == windows ]]; then exit -1; fi
+  - aws --version
+  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b "$(go env GOPATH)/bin" v1.15.0
+  - golangci-lint --version
+  - go install golang.org/x/tools/cmd/cover
+  - go install github.com/mattn/goveralls
+  - go install github.com/wadey/gocovmerge
+
+install:
+  - go mod vendor
+
+script:
+  - make test
+
+after_success:
+  - goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+
+after_script:
+  - ARTIFACT_PREFIX="s3://$ARTIFACTS_BUCKET/$TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER/$TRAVIS_GO_VERSION"
+  - ARTIFACT_SUFFIX="$(go env GOOS)-$(go env GOARCH)"
+  - aws s3 sync ./build/ "$ARTIFACT_PREFIX/$ARTIFACT_SUFFIX/"
+
+notifications:
+  slack:
+    secure: mq26KEU+/lo13tKuY82gvfavJ9U4hL08V4gON3KseZJ3Mz1jAvYLAk72l+yPVtCV384/DoIBkC264ahCO69/veru2H7prR5+xR2nx/2Yej3GX02hRBbMO3IthEnWsCqKZ5xTVIvlsRItLeX4HU4PMwGVlFA67YE3kKXbZze+lzXZJE8HA4ERvKMD5ZSRYg+iys4YfZxYEmntJDb9y6KDyIY7OnKR7oIBtNJ5rkr4VY0m82H9P8cQMDkMKv8OYRBs0BQwhO141PnIrnVLUmx9PgRA+72NBBK+KRuPyxijjKjmbmqt/ZhM3AXqe0E2sMafcTXSQtHfHKQN14hRK4ycUy3b3R74DAEHUE29myeU4Uo+/73FWUysloVJ2qK4Z9Kl6m8+abTJATiYnb8rHbZKtM8W8UNJOX5MvndQtE5XeV8DesZRR89HD6IEHsGO4IC17gogM940T/yBdHibSqIM/xs+f4lG2P0sLVIkELgjGS3VP6rt5+nV4ubGv1I5MtDsrvoGGAm1YEpCzOvngnut2DGSM/k/P0JctyKn7xPO4Lw5YCa75BLHG7SO2p9yW6bj11k1Kb9Ur7BwnE7z3tn6c/C/0x3JPTNDgBYI7mMe5/7DVn5AfiLfJmw8SU67vgkAMuh2PfNZVDRisxRPSGmQqqfpfFqe64aM5hP81B7xiZw=
