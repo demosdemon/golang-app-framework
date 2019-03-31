@@ -1,4 +1,4 @@
-module github.com/demosdemon/golang-app-framework/v0
+module github.com/demosdemon/golang-app-framework/v1
 
 go 1.12
 

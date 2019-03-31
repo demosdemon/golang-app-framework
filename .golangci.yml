@@ -5,7 +5,7 @@ linters-settings:
     line-length: 120
     tab-width: 4
   goimports:
-    local-prefixes: github.com/demosdemon/golang-app-framework/v0
+    local-prefixes: github.com/demosdemon/
 
 linters:
   enable-all: true

@@ -1,7 +1,7 @@
 SOURCE_FILES = $(shell find . -type f -not -path './vendor/*' -iname '*.go' -not -iname '*_test.go')
 TEST_FILES = $(shell find . -type f -not -path './vendor/*' -iname '*_test.go')
 
-_prefix = github.com/demosdemon/golang-app-framework/v0
+_prefix = github.com/demosdemon/golang-app-framework/v1
 COMMANDS = $(notdir $(wildcard cmd/*))
 PACKAGES = app $(foreach b,$(COMMANDS),cmd/$(b))
 BUILD_TARGETS = $(foreach b,$(COMMANDS),build/$(b))
