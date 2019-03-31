@@ -3,7 +3,7 @@ TEST_FILES = $(shell find . -type f -not -path './vendor/*' -iname '*_test.go')
 
 _prefix = github.com/demosdemon/golang-app-framework/v0
 COMMANDS = $(notdir $(wildcard cmd/*))
-PACKAGES = app vcr $(foreach b,$(COMMANDS),cmd/$(b))
+PACKAGES = app $(foreach b,$(COMMANDS),cmd/$(b))
 BUILD_TARGETS = $(foreach b,$(COMMANDS),build/$(b))
 TEST_PACKAGES = $(foreach b,$(PACKAGES),$(_prefix)/$(b))
 
