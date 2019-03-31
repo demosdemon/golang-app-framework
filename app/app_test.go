@@ -52,6 +52,34 @@ func TestNew(t *testing.T) {
 	assert.True(t, ok)
 }
 
+func TestApp_Exit(t *testing.T) {
+	a := newApp(nil)
+
+	assert.PanicsWithValue(t, "system exit 255", func() {
+		a.Exit(255)
+	})
+
+	a.ExitHandler = func(int) {}
+
+	assert.PanicsWithValue(t, "exit handler returned", func() {
+		a.Exit(255)
+	})
+
+	a = newApp(nil)
+	l := a.Logger()
+	err := l.Warn("test")
+	assert.NoError(t, err)
+	assert.PanicsWithValue(t, "system exit 255", func() {
+		a.Exit(255)
+	})
+	assert.False(t, l.IsInitialized())
+	assert.Equal(
+		t,
+		"[\x1b[33mWARN\x1b[0m] test {\"filename\":\"base.go\",\"lineno\":447,\"seq\":1}\n",
+		a.Stderr.(*bytes.Buffer).String(),
+	)
+}
+
 func TestApp_Logger(t *testing.T) {
 	a := newApp(nil)
 
