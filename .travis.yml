@@ -8,6 +8,7 @@ env:
     - secure: scgqmCh00nkNOUdrAgcvwf3KvBaXHKkojMxkmnj3UKu/5y27FZcrAqhxefsrZ+gwrFVEKiNXObl2KNzxgT8odGyHRc9foEL8hutRTYJeeqNIlbPqTdXSglifWWLvmzZPyzCJtuCJdyMBNjqdQ2qxLIDfGghH4S7JUJzzMhOFQeZUHCkFSzaNQP2lhL76nRPc0eY9AbLdX0IQnA4NuRVTKn8ueNeklS0m2pHa1+Qh0uMTox4vANDegZO258lVJXCl+Lpu8CbSj6gQ1a93ZpnxH3IY08p8csJhLwgVPxdy8w2g4tPAmkDmOmM/l6u+v0jG+/b4OeYAe/LyJe+YbWD6BvhmvtNOepvefaH0O0KM7lyXMxyAqGOY8qF3qQOUMtCKDXmYGxVTS3WcHEggCQ/2rHa3shQS7MbNHCHP49NXXdtW3747z8AkkzGHeaX2zB/epzlthiQGmfynq/lUe5/0gNXGBd4NVOFv+Jn0PcEfX+y9l8Jh5Q4+pOcttrKckmPxRtJv+9eDgfEU6Kt1zJ394FJQPNvXRkkPMK/YNDcOj9aHrDwjt0hNo7jK+l8YVccW/WGvXMPs0ReCe7XfR0U569yMUJ8Gt0kSycEKEF/fy08/Puk7KvLIdO9yL3lT4xQH+hGvkEpdQmUXMakMhBt4J6J1jcfV0Or6Jt9oeXoZMK0=
     - AWS_DEFAULT_REGION=us-east-2
     - AWS_DEFAULT_OUTPUT=table
+    - secure: Is/1YzygWeZdBCCh4XNUjs8zK+CUQhHZ/8nLYTjQXcOtubBNfXgE+wWkk7ut+hCROak+EFJwjohGnj089Y7h/sZOOaLkKzNcmYbrmSgvHrg8JZlGdPzuloUEbpA86vGdVl92DWZMcVGrSJtQrNiEXZlcC4KZTfMaYANT6qiWaJK12dI0UVJVet7Lpg+1mqFJJDzhLOqrQAv86xUYnn8lLhJt/oiVSSyAP3A2eEjF8cFprbkwhTGniXZ9bAHESGUt6Yd/n7Hq/V9ItEbjkOg1Kc1n78rdAIOXg3op+zaYkLqBi53fgsRGeZwSl2804UTxd+hTuZxGtANDySO8lhYLtMUq3V/fAuUh4cP/fgP91dohCTE2vYMYXBuCuIkQfe3XGDv9SDsahANaWccl5UpWF1EJPObdIJJDbhWJz1Tkr8giZ4MUpt2hEmqkUpseV5+ObfZvo7WC7ssoD3vQ6zFtwVX0SJ/Z91wtJkQ8erF+9e8UkGQiL7Ce2HdTwNzD9iuBh/ypxWchZHiPoYtGvNISP0zSXF+fs1oIma1YlxUzXEmBPK01S6Radp5PpCRhmT2vFnQiT0+/PQSKolJVvAEA3riBpWRJ6ca2MYUriKqG1WBnulck3Yef56rLKe8OH1d3Nb87Yphjs10VnlOXmaYyK9G2iCLboRzLoaHgs49vixg=
 
 go:
   - 1.12.x
@@ -38,6 +39,7 @@ script:
 
 after_success:
   - goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - bash <(curl -s https://codecov.io/bash)
 
 after_script:
   - ARTIFACT_PREFIX="s3://$ARTIFACTS_BUCKET/$TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER/$TRAVIS_GO_VERSION"
