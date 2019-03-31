@@ -13,7 +13,7 @@ import (
 	"github.com/aphistic/gomol"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/demosdemon/golang-app-framework/v1/app"
+	"github.com/demosdemon/golang-app-framework/app"
 )
 
 func newApp(environ []string, args ...string) *app.App {
